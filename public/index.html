@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Take a selfie!!</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="selfie_server.js"></script>
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<!--<h1>Hello!!</h1>-->
+
+    <h1>location</h1><br>
+    <p id="lat">Latitide:</p>
+    <p id="long">Longitude:</p>
+    <label>Howw is your moood...</label><br>
+    <input type="text" id="mood" placeholder="tell me your mood.."><br>
+
+    <label>What is going onn...</label><br>
+    <input type="text" id="work" placeholder="what is going on.. eating/studying"><br>
+
+	<a href="http://localhost:3000/database.html">To database page!</a><br><br>
+	<button id="submit">Submit</button>
+
+	<!--<img id="image" style="height: 10cm; width: 10cm">-->
+	
+	<script src="index.js"></script>
+</body>
+</html>
