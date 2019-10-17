@@ -17,8 +17,20 @@ app.listen(PORT, () => {
 
 app.use(express.static('public'));
 
-app.get('/api_get', function(req, res) {
-    res.send('<h1>Hello, world</h1>')
+app.get('/api', function(req, res) {
+            console.log('I got a get request!'); 
+        
+            db.find({},function(err,data){
+        
+                if(err)
+                {
+                    res.end();
+                    return;
+                }
+                res.json(data);
+                  
+            });
+            //res.json({status:123});
 })
 
 app.post('/api_post',function(req,res){

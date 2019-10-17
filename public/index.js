@@ -110,3 +110,5 @@ button.addEventListener('click',async function onclick(){
   const json_data=await data_fetch.json();//data gettinig is of the form text
   console.log(json_data);
 })
+//var D_button=document.getElementById('fetch_db');
+//D_button.onclick="window.location.href = 'localhost:5000/database.html';";
