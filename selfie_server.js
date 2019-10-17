@@ -1,6 +1,12 @@
 const express = require('express')//express is the basic libraray we need to import 
 const app=express();//it export the export function to which 'app' acquires
 
+
+const database=require('nedb');
+const db=new database('saved_data.db');
+db.loadDatabase();
+
+
 app.use(express.json({limit:'1mb'}))
 const PORT = 5000
 
@@ -16,6 +22,20 @@ app.get('/api_get', function(req, res) {
 })
 
 app.post('/api_post',function(req,res){
+
+    var database=[];
+
+    console.log('I got a post request!!');
+
+   database.push(req.body);
+   res.json(
+       {
+           status:"ok"
+       }
+   );
+   db.insert(database,(err,docs)=>{
+       console.log('Data is inserted!!');
+   })
       
 })
 
