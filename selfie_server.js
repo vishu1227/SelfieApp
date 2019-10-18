@@ -28,7 +28,6 @@ app.get('/api', function(req, res) {
                     return;
                 }
                 res.json(data);
-                  
             });
             //res.json({status:123});
 })
